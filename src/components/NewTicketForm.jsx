@@ -27,18 +27,18 @@ class NewTicketForm extends React.Component {
             type="text"
             id="names"
             placeholder="Pair Names"/>
-          <br/>
+          <br/><br/>
           <input
             ref="_location"
             type="text"
             id="location"
             placeholder="Location"/>
-          <br/>
+          <br/><br/>
           <textarea
             ref="_issue"
             id="issue"
             placeholder="Describe your issue."/>
-          <br/>
+          <br/><br/>
           <Button bsStyle="success" type="submit">Help!</Button>
         </form>
       </div>

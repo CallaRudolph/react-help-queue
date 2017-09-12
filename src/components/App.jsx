@@ -4,7 +4,7 @@ import Queue from "./Queue";
 
 function App(props){
   return (
-    <div>
+    <div className="container">
       <Header />
       <Queue />
     </div>
