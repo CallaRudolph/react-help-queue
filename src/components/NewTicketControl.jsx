@@ -6,9 +6,18 @@ class NewTicketControl extends React.Component {
 
   constructor(props) {
     super(props);
+    this.showForm = this.showForm.bind(this);
+    this.hideForm = this.hideForm.bind(this);
     this.state = {formVisibleOnPage: false};
     this.handleDisplayingNewTicketForm = this.handleDisplayingNewTicketForm.bind(this);
-    console.log(this);
+  }
+
+  showForm() {
+    this.setState({formVisibleOnPage: true});
+  }
+
+  hideForm() {
+    this.setState({formVisibleOnPage: false});
   }
 
   handleDisplayingNewTicketForm(event){
@@ -22,9 +31,11 @@ class NewTicketControl extends React.Component {
     let formAreaContent = null;
     if (formVisibleOnPage) {
       formAreaContent = <NewTicketForm
-        onNewTicketCreation={this.props.onNewTicketCreation}/>
+        onNewTicketCreation={this.props.onNewTicketCreation}
+        hideFormAfterSubmission = {this.hideForm}/>
     } else {
-      formAreaContent = <button onClick={this.handleDisplayingNewTicketForm.bind(this)}>Request Help</button>;
+      formAreaContent = <button onClick={this.showForm}>Request Help</button>;
+        // this.handleDisplayingNewTicketForm.bind(this) ??
     }
 
     return (
