@@ -1,6 +1,7 @@
 import React from "react";
 import Ticket from "../models/Ticket.js";
 import PropTypes from "prop-types";
+import { Button } from "react-bootstrap";
 
 class NewTicketForm extends React.Component {
 
@@ -26,16 +27,19 @@ class NewTicketForm extends React.Component {
             type="text"
             id="names"
             placeholder="Pair Names"/>
+          <br/>
           <input
             ref="_location"
             type="text"
             id="location"
             placeholder="Location"/>
+          <br/>
           <textarea
             ref="_issue"
             id="issue"
             placeholder="Describe your issue."/>
-          <button type="submit">Help!</button>
+          <br/>
+          <Button bsStyle="success" type="submit">Help!</Button>
         </form>
       </div>
     );
