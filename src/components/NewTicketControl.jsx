@@ -15,12 +15,12 @@ class NewTicketControl extends React.Component {
     // this.handleDisplayingNewTicketForm = this.handleDisplayingNewTicketForm.bind(this);
   }
 
-  showFormModal(event) {
+  showFormModal() {
     this.setState({
       formModalIsShowing: true});
   }
 
-  hideFormModal(event) {
+  hideFormModal() {
     this.setState({
       formModalIsShowing: false});
   }
