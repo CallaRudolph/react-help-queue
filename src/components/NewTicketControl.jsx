@@ -60,7 +60,7 @@ class NewTicketControl extends React.Component {
 }
 
 NewTicketControl.propTypes = {
-  onNewTicketCreation: PropTypes.func
-}
+  onNewTicketCreation: PropTypes.func,
+};
 
 export default NewTicketControl;

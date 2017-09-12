@@ -1,9 +1,8 @@
 import React from "react";
 import Ticket from "./Ticket";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function TicketList(props) {
-  console.log(props.ticketList);
   return (
     <div>
       <hr/>
