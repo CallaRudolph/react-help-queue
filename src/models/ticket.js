@@ -1,8 +1,8 @@
 class Ticket {
-  constructor(names, location, description) {
+  constructor(names, location, issue) {
     this.names = names;
     this.location = location;
-    this.description = description;
+    this.issue = issue;
   }
 }
 
