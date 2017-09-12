@@ -33,28 +33,28 @@ class NewTicketControl extends React.Component {
 
   render() {
     return (
-      <div>
-        <Button
-          block
-          bsStyle="primary"
-          bsSize="large"
-          onClick={this.showFormModal}>
-          Request Help!!!!!!!!
-        </Button>
-        <Modal
-          show={this.state.formModalIsShowing}
-          onHide={this.hideFormModal}
-          bsSize="large">
-          <Modal.Header>
-            <Modal.Title>Request Help</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <NewTicketForm
-              onNewTicketCreation={this.props.onNewTicketCreation}
-              hideFormAfterSubmission = {this.hideFormModal}/>
-          </Modal.Body>
-        </Modal>
-      </div>
+        <div>
+            <Button
+                block
+                bsStyle="primary"
+                bsSize="large"
+                onClick={this.showFormModal}>
+                Request Help!!!!!!!!
+            </Button>
+            <Modal
+                show={this.state.formModalIsShowing}
+                onHide={this.hideFormModal}
+                bsSize="large">
+                <Modal.Header>
+                    <Modal.Title>Request Help</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <NewTicketForm
+                        onNewTicketCreation={this.props.onNewTicketCreation}
+                        hideFormAfterSubmission = {this.hideFormModal}/>
+                </Modal.Body>
+            </Modal>
+        </div>
     );
   }
 }

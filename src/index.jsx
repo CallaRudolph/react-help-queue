@@ -6,9 +6,9 @@ import App from "./components/App";
 
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
-      <Component/>
-    </AppContainer>,
+      <AppContainer>
+          <Component/>
+      </AppContainer>,
     document.getElementById("react-app-root")
   );
 };

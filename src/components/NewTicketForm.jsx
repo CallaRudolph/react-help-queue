@@ -20,28 +20,28 @@ class NewTicketForm extends React.Component {
 
   render(){
     return (
-      <div>
-        <form onSubmit={this.handleNewTicketFormSubmission}>
-          <input
-            ref="_names"
-            type="text"
-            id="names"
-            placeholder="Pair Names"/>
-          <br/><br/>
-          <input
-            ref="_location"
-            type="text"
-            id="location"
-            placeholder="Location"/>
-          <br/><br/>
-          <textarea
-            ref="_issue"
-            id="issue"
-            placeholder="Describe your issue."/>
-          <br/><br/>
-          <Button bsStyle="success" type="submit">Help!</Button>
-        </form>
-      </div>
+        <div>
+            <form onSubmit={this.handleNewTicketFormSubmission}>
+                <input
+                    ref="_names"
+                    type="text"
+                    id="names"
+                    placeholder="Pair Names"/>
+                <br/><br/>
+                <input
+                    ref="_location"
+                    type="text"
+                    id="location"
+                    placeholder="Location"/>
+                <br/><br/>
+                <textarea
+                    ref="_issue"
+                    id="issue"
+                    placeholder="Describe your issue."/>
+                <br/><br/>
+                <Button bsStyle="success" type="submit">Help!</Button>
+            </form>
+        </div>
     );
   }
 
