@@ -35,7 +35,7 @@ class Queue extends React.Component {
     newMasterTicketList.forEach((ticket) =>
       ticket.setTimeSinceOpened()
     );
-    this.setState({masterTicketList:newMasterTicketList})
+    this.setState({masterTicketList:newMasterTicketList});
   }
 
   render() {
