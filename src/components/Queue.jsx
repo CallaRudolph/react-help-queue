@@ -12,21 +12,21 @@ class Queue extends React.Component {
     this.addNewTicketToList = this.addNewTicketToList.bind(this);
   }
 
-  addNewTicketToList(newTicket) {
-    var newMasterTicketList = this.state.masterTicketList.slice();
-    newMasterTicketList.push(newTicket);
-    this.setState({masterTicketList: newMasterTicketList});
-  }
-
   componentDidMount(){
     this.timeSinceOpenedChecker = setInterval(() =>
       this.updateTicketTimeSinceOpened(),
-      5000
+    5000
     );
   }
 
   componentWillUnmount() {
     clearInterval(this.timeSinceOpenedChecker);
+  }
+
+  addNewTicketToList(newTicket) {
+    var newMasterTicketList = this.state.masterTicketList.slice();
+    newMasterTicketList.push(newTicket);
+    this.setState({masterTicketList: newMasterTicketList});
   }
 
   updateTicketTimeSinceOpened() {
@@ -46,7 +46,6 @@ class Queue extends React.Component {
         </div>
     );
   }
-
 }
 
 export default Queue;
