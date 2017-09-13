@@ -10,9 +10,10 @@ class Queue extends React.Component {
       masterTicketList: [],
     };
     this.addNewTicketToList = this.addNewTicketToList.bind(this);
+    // this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.timeSinceOpenedChecker = setInterval(() =>
       this.updateTicketTimeSinceOpened(),
     5000
@@ -30,7 +31,6 @@ class Queue extends React.Component {
   }
 
   updateTicketTimeSinceOpened() {
-    console.log("check");
     let newMasterTicketList = this.state.masterTicketList.slice();
     newMasterTicketList.forEach((ticket) =>
       ticket.setTimeSinceOpened()
