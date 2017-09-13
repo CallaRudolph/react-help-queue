@@ -3,7 +3,6 @@ class Ticket {
     this.names = names;
     this.location = location;
     this.issue = issue;
-    this.timeOpened = new Date();
   }
 }
 
