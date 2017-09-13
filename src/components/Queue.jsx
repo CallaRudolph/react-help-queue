@@ -25,6 +25,10 @@ class Queue extends React.Component {
     );
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timeSinceOpenedChecker);
+  }
+
   updateTicketTimeSinceOpened() {
     console.log("check");
     let newMasterTicketList = this.state.masterTicketList.slice();
