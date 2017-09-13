@@ -25,6 +25,15 @@ class Queue extends React.Component {
     );
   }
 
+  updateTicketTimeSinceOpened() {
+    console.log("check");
+    let newMasterTicketList = this.state.masterTicketList.slice();
+    newMasterTicketList.forEach((ticket) =>
+      ticket.setTimeSinceOpened()
+    );
+    this.setState({masterTicketList:newMasterTicketList})
+  }
+
   render() {
     return (
         <div>
