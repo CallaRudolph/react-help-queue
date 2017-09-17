@@ -8,7 +8,7 @@ describe("Ticket list reducer", () => {
   });
 
   test('imported value should match action type string', () => {
-    expect(constants.ADD_TICKET).toEqual('testing testing 123');
+    expect(constants.ADD_TICKET).toEqual('testing testing 12223');
   });
-  
+
 });
