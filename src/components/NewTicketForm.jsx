@@ -2,11 +2,13 @@ import React from "react";
 import Ticket from "../models/Ticket.js";
 import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
+import { connect } from "react-redux";
 
 class NewTicketForm extends React.Component {
 
   constructor(props) {
     super(props);
+    console.log(props);
     this.handleNewTicketFormSubmission = this.handleNewTicketFormSubmission.bind(this);
   }
 
@@ -51,5 +53,7 @@ NewTicketForm.propTypes = {
   onNewTicketCreation: PropTypes.func,
   hideFormAfterSubmission: PropTypes.func,
 };
+
+NewTicketForm = connect()(NewTicketForm);
 
 export default NewTicketForm;
