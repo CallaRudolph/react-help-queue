@@ -23,7 +23,7 @@ class NewTicketForm extends React.Component {
       location: _location.value,
       description: _issue.value,
       timeOpened: new Date().getTime()
-    }
+    };
     dispatch(action);
     var newTicket = new Ticket(_names.value, _location.value, _issue.value);
     this.props.onNewTicketCreation(newTicket);

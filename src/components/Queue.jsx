@@ -1,6 +1,7 @@
 import React from "react";
 import TicketList from "./TicketList";
 import NewTicketControl from "./NewTicketControl";
+import {connect} from "react-redux";
 
 class Queue extends React.Component {
 
@@ -48,4 +49,4 @@ class Queue extends React.Component {
   }
 }
 
-export default Queue;
+export default connect()(Queue);
