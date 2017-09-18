@@ -20,7 +20,7 @@ class NewTicketForm extends React.Component {
       id: null,
       names: _names.value,
       location: _location.value,
-      description: _issue.value,
+      issue: _issue.value,
       timeOpened: new Date().getTime()
     };
     dispatch(action);
