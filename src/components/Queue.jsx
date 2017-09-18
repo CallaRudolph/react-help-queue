@@ -11,7 +11,7 @@ class Queue extends React.Component {
       masterTicketList: [],
     };
     this.addNewTicketToList = this.addNewTicketToList.bind(this);
-    // this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
+    this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
   }
 
   componentDidMount() {
@@ -49,4 +49,11 @@ class Queue extends React.Component {
   }
 }
 
-export default connect()(Queue);
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    masterTicketList : state
+  };
+};
+
+export default connect(mapStateToProps)(Queue);
