@@ -4,7 +4,6 @@ import Moment from "moment";
 
 function Ticket(props) {
   const timeSinceOpened = new Moment().to(props.timeOpened);
-  console.log(timeSinceOpened);
   return (
       <div>
           <h3>{props.location} - {props.names}</h3>

@@ -1,6 +1,6 @@
 import React from "react";
 import NewTicketForm from "./NewTicketForm";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 
@@ -12,7 +12,6 @@ class NewTicketControl extends React.Component {
     this.hideFormModal = this.hideFormModal.bind(this);
     this.state = {
       formModalIsShowing: false};
-    // this.handleDisplayingNewTicketForm = this.handleDisplayingNewTicketForm.bind(this);
   }
 
   showFormModal() {
@@ -24,12 +23,6 @@ class NewTicketControl extends React.Component {
     this.setState({
       formModalIsShowing: false});
   }
-  //
-  // handleDisplayingNewTicketForm(event){
-  //   console.log("New ticket button was clicked!");
-  //   this.setState({formVisibleOnPage: true});
-  //   console.log(this);
-  // }
 
   render() {
     return (
