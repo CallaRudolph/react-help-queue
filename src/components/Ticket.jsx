@@ -5,27 +5,27 @@ import Moment from "moment";
 function Ticket(props) {
   const timeSinceOpened = new Moment().to(props.timeOpened);
   let ticketDetails =
-    <div>
-        <h3>{props.location} - {props.names}</h3>
-        <p><em>{props.issue}</em></p>
-        <p>{timeSinceOpened}</p>
-    </div>
+      <div>
+          <h3>{props.location} - {props.names}</h3>
+          <p><em>{props.issue}</em></p>
+          <p>{timeSinceOpened}</p>
+      </div>;
   if (props.currentRoute === "/admin") {
     return (
-      <div>
-          {ticketDetails}
-          <button onClick={() => { props.handleClosingTicket(props.id) }} >Close Ticket</button>
-          <hr/>
-      </div>
+        <div>
+            {ticketDetails}
+            <button onClick={() => { props.handleClosingTicket(props.id) }} >Close Ticket</button>
+            <hr/>
+        </div>
     );
   }
   else {
     return (
-      <div>
-          {ticketDetails}
-          <hr/>
-      </div>
-    )
+        <div>
+            {ticketDetails}
+            <hr/>
+        </div>
+    );
   }
 }
 
@@ -34,7 +34,9 @@ Ticket.propTypes = {
   location: PropTypes.string.isRequired,
   issue: PropTypes.string.isRequired,
   timeOpened: PropTypes.number.isRequired,
-  currentRoute: PropTypes.string
+  id: PropTypes.string.isRequired,
+  currentRoute: PropTypes.string,
+  handleClosingTicket: PropTypes.func
 };
 
 export default Ticket;

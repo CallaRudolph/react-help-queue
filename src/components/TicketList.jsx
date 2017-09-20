@@ -12,7 +12,9 @@ function TicketList(props) {
                   issue={ticket.issue}
                   timeOpened={ticket.timeOpened}
                   key={ticket.id}
-                  currentRoute={props.currentRoute}/>
+                  id={ticket.id}
+                  currentRoute={props.currentRoute}
+                  handleClosingTicket={props.handleClosingTicket}/>
           )}
       </div>
   );
@@ -20,7 +22,8 @@ function TicketList(props) {
 
 TicketList.propTypes = {
   ticketList: PropTypes.array.isRequired,
-  currentRoute: PropTypes.string
+  currentRoute: PropTypes.string,
+  handleClosingTicket: PropTypes.func
 };
 
 export default TicketList;

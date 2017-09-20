@@ -15,7 +15,7 @@ class Admin extends React.Component {
     const action = {
       type: c.CLOSE_TICKET,
       ticketId: ticketId
-    }
+    };
     dispatch(action);
   }
 
@@ -24,8 +24,9 @@ class Admin extends React.Component {
         <div>
             <h3>This is the Admin page!</h3>
             <TicketList
-              ticketList = {this.props.adminMasterTicketList}
-              currentRoute = {this.props.location.pathname}/>
+                ticketList = {this.props.adminMasterTicketList}
+                currentRoute = {this.props.location.pathname}
+                handleClosingTicket = {this.handleClosingTicket}/>
         </div>
     );
   }
