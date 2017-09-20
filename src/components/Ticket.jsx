@@ -14,7 +14,7 @@ function Ticket(props) {
     return (
       <div>
           {ticketDetails}
-          <button>Close Ticket</button>
+          <button onClick={() => { props.handleClosingTicket(props.id) }} >Close Ticket</button>
           <hr/>
       </div>
     );
