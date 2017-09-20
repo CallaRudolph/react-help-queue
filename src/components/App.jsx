@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Queue from "./Queue";
+import Admin from "./Admin";
 import { Switch, Route } from "react-router-dom";
 
 function App(){
