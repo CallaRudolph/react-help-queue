@@ -4,21 +4,37 @@ import Moment from "moment";
 
 function Ticket(props) {
   const timeSinceOpened = new Moment().to(props.timeOpened);
-  return (
+  let ticketDetails =
+    <div>
+        <h3>{props.location} - {props.names}</h3>
+        <p><em>{props.issue}</em></p>
+        <p>{timeSinceOpened}</p>
+    </div>
+  if (props.currentRoute === "/admin") {
+    return (
       <div>
-          <h3>{props.location} - {props.names}</h3>
-          <p><em>{props.issue}</em></p>
-          <p>{timeSinceOpened}</p>
+          {ticketDetails}
+          <button>Close Ticket</button>
           <hr/>
       </div>
-  );
+    );
+  }
+  else {
+    return (
+      <div>
+          {ticketDetails}
+          <hr/>
+      </div>
+    )
+  }
 }
 
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   issue: PropTypes.string.isRequired,
-  timeOpened: PropTypes.number.isRequired
+  timeOpened: PropTypes.number.isRequired,
+  currentRoute: PropTypes.string
 };
 
 export default Ticket;

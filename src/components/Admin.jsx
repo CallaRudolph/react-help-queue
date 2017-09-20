@@ -7,7 +7,9 @@ class Admin extends React.Component {
     return (
         <div>
             <h3>This is the Admin page!</h3>
-            <TicketList ticketList = {this.props.adminMasterTicketList}/>
+            <TicketList
+              ticketList = {this.props.adminMasterTicketList}
+              currentRoute = {this.props.location.pathname}/>
         </div>
     );
   }
