@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import { AppContainer } from "react-hot-loader";
 import App from "./components/App";
 import { createStore, applyMiddleware } from "redux";
 import reducer from "./reducers/ticket-list-reducer";
@@ -9,7 +8,18 @@ import { HashRouter } from "react-router-dom";
 import middlewareLogger from "./middleware/middleware-logger";
 import persistDataLocally from "./middleware/persist-local-storage-data";
 
-const store = createStore(reducer, applyMiddleware(middlewareLogger, persistDataLocally));
+let retrievedState;
+try {
+    retrievedState = localStorage.getItem("reduxStore");
+  if (retrievedState === null) {
+    retrievedState = [];
+  }
+  retrievedState = JSON.parse(retrievedState);
+} catch (err) {
+  retrievedState = [];
+}
+
+const store = createStore(reducer, retrievedState,  applyMiddleware(middlewareLogger, persistDataLocally));
 
 ReactDOM.render(
     <Provider store={store}>
@@ -19,12 +29,3 @@ ReactDOM.render(
     </Provider>,
   document.getElementById("react-app-root")
 );
-//
-//
-// render(App);
-//
-// if (module.hot) {
-//   module.hot.accept("./components/App", () => {
-//     render(App);
-//   });
-// }
