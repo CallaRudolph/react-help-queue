@@ -62,10 +62,15 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'css-loader',
+        exclude: resolve(__dirname, "src/styles/styles.css"),
         options: {
           modules: true,
           localIdentName: '[name]__[local]___[hash:base64:5]',
         }
+      },
+      {
+        test: resolve(__dirname, "src/styles/styles.css"),
+        loader: "css-loader"
       }
     ]
   },

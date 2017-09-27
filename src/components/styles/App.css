@@ -4,12 +4,3 @@ body, .app {
   height: 100vh;
   min-height: 100%;
 }
-
-/*.header {
-  background-color: #FCFFFD;
-}*/
-
-
-#react-app-root {
-  background-color: #FCFFFD;
-}
