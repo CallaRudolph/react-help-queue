@@ -39,9 +39,9 @@ module.exports = {
         options: {
           emitWarning: true,
           configFile: "./.eslintrc.json"
-          }
-        },
-        {
+        }
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -53,6 +53,18 @@ module.exports = {
           plugins: [
             "react-hot-loader/babel"
           ]
+        }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
         }
       }
     ]
